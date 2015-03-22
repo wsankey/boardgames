@@ -4,3 +4,12 @@
 
 <h2>Homeward bound</h2>
 <h3>{{ message }}</h3>
+
+{% if user.is_authenticated %}
+  <p>Hi, {{ user.name }}!</p>
+
+{% else %}
+  <p> Welcome to the Django fundamentals course.</p>
+
+{% endif %}
+
