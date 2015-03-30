@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'main',
     'tictactoe',
+    'person',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -79,6 +80,7 @@ USE_L10N = True
 
 USE_TZ = True
 
+REST_SESSION_LOGIN = False
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/dev/howto/static-files/
@@ -86,3 +88,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 TEMPLATE_DIRS = (os.path.join(BASE_DIR, "templates"),)
+
+LOGIN_URL = 'boardgames_login'
+LOGOUT_URL = 'boardgames_logout'
+LOGIN_REDIRECT_URL = 'boardgames_home'

@@ -2,12 +2,10 @@ from django.conf.urls import include, url, patterns
 from django.contrib import admin
 
 urlpatterns = [
-    # Examples:
-    # url(r'^$', 'boardgames.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
-
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^person/', include('person.urls')),
     url(r'^hello$', 'main.views.home', name='boardgames_home')
+
 ]
 
 urlpatterns += patterns(
